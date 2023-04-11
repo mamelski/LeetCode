@@ -4,17 +4,20 @@ public class Solution
 {
     public int[] TwoSum(int[] nums, int target)
     {
-        var indicesOfNumber = new Dictionary<int, List<int>>();
+        var indexOfNumber = new Dictionary<int, int>();
 
         for (var i = 0; i < nums.Length; ++i)
         {
-            if (indicesOfNumber.ContainsKey(nums[i]))
+            if (indexOfNumber.ContainsKey(nums[i]))
             {
-                indicesOfNumber[nums[i]].Add(i);
+                if (nums[i] * 2 == target)
+                {
+                    return new[] {indexOfNumber[nums[i]], i};
+                }
             }
             else
             {
-                indicesOfNumber[nums[i]] = new List<int> {i};
+                indexOfNumber[nums[i]] = i;
             }
         }
 
@@ -23,22 +26,15 @@ public class Solution
             var numberToFind = target - nums[i];
             if (numberToFind == nums[i])
             {
-                if (indicesOfNumber[nums[i]].Count > 1)
-                {
-                    return new[] {indicesOfNumber[nums[i]][0], indicesOfNumber[nums[i]][1]};
-                }
-
+                continue;
             }
-            else
+
+            if (indexOfNumber.TryGetValue(numberToFind, out var value))
             {
-                if (indicesOfNumber.TryGetValue(numberToFind, out var value))
-                {
-                    return new[] {i, value[0]};
-                }
+                return new[] {i, value};
             }
-
-           
         }
+
         return Array.Empty<int>();
     }
 }
