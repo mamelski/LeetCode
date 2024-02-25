@@ -1,7 +1,9 @@
 ﻿
-using LeetCode.Console.Problems._3._Longest_Substring_Without_Repeating_Characters;
 
 
 
-var solution = new Solution().LengthOfLongestSubstring("abcabcbb");
-Console.WriteLine(solution);
+using LeetCode.Console.Problems._684._Redundant_Connection;
+
+var solution = new Solution().FindRedundantConnection([[1,2],[2,3],[3,4],[1,4],[1,5]]);
+
+Console.WriteLine($"{solution[0]} {solution[1]}");
