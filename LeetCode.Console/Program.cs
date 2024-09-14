@@ -1,7 +1,11 @@
 ﻿
-using LeetCode.Console.Problems._1930._Unique_Length_3_Palindromic_Subsequences;
 
-var solution = new Solution().CountPalindromicSubsequence("bbcbaba");
+using LeetCode.Console.Problems._2._Add_Two_Numebers;
+
+
+var l1 = new ListNode(9, new ListNode(9, new ListNode(9)));
+var l2 = new ListNode(9, new ListNode(9));
+var solution = new Solution().AddTwoNumbers(l1,l2);
     
 
 Console.WriteLine($"{solution}");

@@ -1,4 +1,4 @@
-namespace LeetCode.Console.Problems._9._IsPalindrome;
+namespace LeetCode.Console.Problems._9._Is_Palindrome;
 
 public class Solution {
     public bool IsPalindrome(int x)

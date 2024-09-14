@@ -1,4 +1,4 @@
-namespace LeetCode.Console.Problems;
+namespace LeetCode.Console.Problems._1._TwoSum;
 
 public class Solution
 {
