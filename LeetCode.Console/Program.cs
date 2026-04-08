@@ -1,4 +1,4 @@
-﻿using LeetCode.Console.Problems._88._Merge_Sorted_Array;
+﻿using LeetCode.Console._88._Merge_Sorted_Array;
 
 var solution = new Solution();
 
