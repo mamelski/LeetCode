@@ -1,13 +1,6 @@
-﻿using LeetCode.Console._88._Merge_Sorted_Array;
+﻿using LeetCode.Console._1470._Shuffle_the_Array;
 
 var solution = new Solution();
 
 
-int[] num1 = [0];
-int[] num2 = [1];
-Solution.Merge(num1, 0, num2, 1);
-
-foreach (var item in num1)
-{
-    Console.WriteLine(item);
-}
+var res = solution.Shuffle([2,5,1,3,4,7], 3);
